@@ -41,6 +41,19 @@ h2 {
     color: rgb(0, 0, 0);
     padding: 8px 22px;
 }
+.menu-1 {
+    margin: 1.5rem 0;
+}
+
+.menu-1 a {
+    font-size: 1.1 re, ;
+    font-family: 'Mouse Memoirs', sans-serif;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    background-color: yellow;
+    color: #000;
+    padding: 8px 22px;
+}
 
 .box {
     display: flex;
@@ -58,4 +71,7 @@ h2 {
     width: 100%;
     display: block;
     box-shadow: 7x 7x 20px rgba(0,0,0,0.2);
+}
+.add-border{
+    border: 2px solid black;
 }

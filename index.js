@@ -1,26 +1,31 @@
-function n() {
-    const buttons = document.querySelectorAll('.btn')
-    const storeImages = document.querySelectorAll('.store-item')
+const buttons = document.querySelectorAll(".btn");
+const storeImages = document.querySelectorAll(".store-item");
+const btn = document.querySelector(".border");
 
-    buttons.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault()
-            const filter = e.target.dataset.filter
-            storeImages.forEach((item) => {
-                if (filter === 'all') {
-                    item.style.display = 'block'
-                }
-                else {
-                    if (item.classList.contains(filter)) {
-                        item.style.display = 'block'
-                        console.log(filter)
-                    }
-                    else {
-                        item.style.display = 'none'
-                    }
-                }
-            })
-        })
-    })
-}
-n();
+const funC = () => {
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const filter = e.target.dataset.filter;
+      storeImages.forEach((item) => {
+        if (filter === "all") {
+          item.style.display = "block";
+        } else {
+          if (item.classList.contains(filter)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        }
+      });
+    });
+  });
+};
+funC();
+
+btn.addEventListener("click", (e) => {
+  storeImages.forEach((item) => {
+    item.style.display = "block";
+    item.classList.toggle("add-border");
+  });
+});
