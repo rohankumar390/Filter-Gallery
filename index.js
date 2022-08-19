@@ -23,9 +23,25 @@ const funC = () => {
 };
 funC();
 
-btn.addEventListener("click", (e) => {
-  storeImages.forEach((item) => {
+
+  // btn.addEventListener("click", (e) => {
+  //   storeImages.forEach((item) => {
+  //     item.style.display = "block";
+  //     item.classList.toggle("add-border");
+  //   });
+  // });
+
+const func2 = () => {
+  if(confirm("ARE YOU SURE ?")==true){
     item.style.display = "block";
-    item.classList.toggle("add-border");
-  });
-});
+    btn.addEventListener("click", (e) => {
+      storeImages.forEach((item) => {
+        item.style.display = "block";
+        item.classList.toggle("add-border");
+      });
+    });
+  }
+  else{
+    funC();
+  }
+};
